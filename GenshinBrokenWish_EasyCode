@@ -1,0 +1,32 @@
+import random
+wish = 0
+Pity = 0
+
+def checkPity():
+  if(Pity == 90):
+    print("ยินดีด้วยคุณได้ qiqi สุดน่ารักหนึ่งตัว")
+    Pity = 0
+
+  if(Pity % 10 == 0):
+    print("ยินดีด้วยตุณได้เกลือขั้นกลาง")
+    
+while(wish != 5):
+  wish = int(input())
+  if(wish == 5):
+    print("พอแล้วเย่อ")
+    break
+
+
+
+  for i in range(wish):
+    a = random.randint(1, 1000)
+    Pity +=1
+    checkPity()
+    if(a <= 943):
+      print("ยินดีด้วยคุณได้เกลือหอมๆ")
+    elif(943 < a <= 994):
+      print("ยินดีด้วยตุณได้เกลือขั้นกลาง")
+      
+    else:
+      print("ยินดีด้วยคุณได้ qiqi สุดน่ารักหนึ่งตัว")
+      Pity = 0
